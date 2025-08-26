@@ -1,0 +1,53 @@
+# Ignorar dependencias y archivos temporales
+/vendor/
+/node_modules/
+
+# Ignorar archivos de configuración de entorno
+.env
+
+# Ignorar archivos de sistema
+.DS_Store
+Thumbs.db
+
+# Ignorar archivos de logs
+*.log
+
+# Ignorar archivos de subida y datos
+/data/uploads/
+
+# Ignorar archivos de cache
+.cache/
+
+# Ignorar archivos de configuración de IDE
+.vscode/
+.idea/
+
+# Ignorar archivos de pruebas y resultados temporales
+*.tmp
+*.bak
+
+# Ignorar archivos de autoload generados por Composer
+composer.lock
+
+# Ignorar archivos de configuración de XAMPP
+xampp-control.ini
+
+# Ignorar archivos de configuración de Apache
+httpd.conf
+
+# Ignorar archivos de configuración de PHP
+php.ini
+
+# Ignorar el contenido de repositories pero no la carpeta
+/core/*
+!/core/
+
+/data/repositories/*
+!/data/repositories/
+
+/data/models/*
+!/data/models/
+
+# Ignorar el contenido de la carpeta img pero no la carpeta
+/public/img/*
+!/public/img/
