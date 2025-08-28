@@ -3,7 +3,7 @@ function assets($route) {
     // Elimina cualquier barra inicial para evitar dobles barras
     $route = ltrim($route, '/');
     $ext = strtolower(pathinfo($route, PATHINFO_EXTENSION));
-    $base = "/report/public/";
+    $base = "/alta_buses/public/";
 
     // Mapeo de extensiones a carpetas
     $folders = [
