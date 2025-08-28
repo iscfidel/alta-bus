@@ -43,7 +43,7 @@
                     return "/report/public/views/" . ltrim($path, "/");
                 }
                 ?>
-                <a class="nav-link text-white" href="<?php echo route('login.php'); ?>"><i class="fa-solid fa-right-from-bracket me-2"></i>Cerrar Sesión</a>
+                <a class="nav-link text-white" href="/alta_buses/logout"><i class="fa-solid fa-right-from-bracket me-2"></i>Cerrar Sesión</a>
             </li>
         </ul>
     </div>

@@ -1,3 +1,10 @@
+<?php
+session_start();
+if (!isset($_SESSION['permisos']) || !in_array('ver_contadores', $_SESSION['permisos'])) {
+    header('Location: /alta_buses/login');
+    exit;
+}
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -6,6 +13,6 @@
     <title>Inicio</title>
 </head>
 <body>
-    
+    <h1>Este es mi inicio.</h1>
 </body>
 </html>

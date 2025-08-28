@@ -1,4 +1,10 @@
-
+<?php
+session_start();
+if (!isset($_SESSION['permisos']) || !in_array('ver_contadores', $_SESSION['permisos'])) {
+    header('Location: /alta_buses/login');
+    exit;
+}
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -68,7 +74,7 @@
                     </div>
                 <?php endif; ?>
                 <?php
-                // Campos a mostrar
+                // Campos a mostrar "pa que te enojas bebe"
                 $camposMostrar = ['NUMERO', 'NOMBRE TIPO DE RUTA', 'RUTA', 'id_Station', 'id_Line'];
                 $indices = [];
                 if (isset($resultado) && is_array($resultado) && count($resultado) > 0) {
@@ -90,8 +96,9 @@
                     <tbody>
                         <?php if (isset($resultado) && is_array($resultado) && count($resultado) > 1): ?>
                             <?php foreach ($resultado as $filaIndex => $fila): ?>
-                                <?php if ($filaIndex === 0) continue; // Saltar encabezado ?>
-                                <tr>
+                                <?php if ($filaIndex === 0) continue; // Saltar encabezado "hechala pal tsuru, uy chiquito"
+                                ?>
+                                <tr> <!-- "aqui yo mando papa" -->
                                     <?php foreach ($indices as $i): ?>
                                         <td><?= htmlspecialchars($fila[$i]) ?></td>
                                     <?php endforeach; ?>
@@ -156,7 +163,7 @@
             const formArchivo = document.getElementById('formArchivo');
             const formFiltros = document.getElementById('formFiltros');
             const switchLabel = document.getElementById('switchLabel');
-            
+
             function updateForms() {
                 if (inputSwitch.checked) {
                     formArchivo.style.display = '';
@@ -171,8 +178,8 @@
             inputSwitch.addEventListener('change', updateForms);
             updateForms();
         });
-        </script>
-        <script src="<?php echo assets('search-bus.js'); ?>"></script>
+    </script>
+    <script src="<?php echo assets('search-bus.js'); ?>"></script>
 </body>
 
 </html>
